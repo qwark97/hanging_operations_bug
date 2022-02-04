@@ -5,7 +5,7 @@ def run_browser() -> Page:
     print('Start context')
     playwright_context = sync_playwright().start()
     print('Launch browser')
-    browser = playwright_context.chromium.launch(headless=False)
+    browser = playwright_context.chromium.launch()
     print('Open new page')
     page = browser.new_page()
     return playwright_context, browser, page
